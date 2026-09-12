@@ -123,8 +123,9 @@ p { margin: 0 0 1rem; }
   .site-header { display: grid; grid-template-columns: 1fr auto 1fr; }
   .nav-toggle { display: flex; grid-column: 3; justify-self: end; }
   .logo { grid-column: 1; justify-self: start; }
-  .logo img { height: 32px; }
+  .logo img { height: 28px; }
   .header-actions { grid-column: 2; justify-self: center; }
+  .header-actions .cta-button { padding: 0.55rem 0.7rem; font-size: 0.85rem; }
   .site-nav {
     grid-column: 1 / -1;
     justify-self: unset;
