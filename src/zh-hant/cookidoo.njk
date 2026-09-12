@@ -1,0 +1,103 @@
+---
+layout: base.njk
+title: Cookidoo 加拿大——費用、功能與內容
+description: Cookidoo 到底是什麼、免費試用期後在加拿大要花多少錢，以及是否需要訂閱才能使用 Thermomix TM7。
+permalink: /zh-hant/cookidoo/
+---
+
+<section class="hero">
+  <span class="eyebrow">Cookidoo</span>
+  <h1>Cookidoo：TM7 的食譜平台</h1>
+  <p class="lede">Cookidoo 是讓 TM7 從一台強大電器，變成逐步引導烹調系統的關鍵。以下是它實際的功能、費用，以及您是否需要它。</p>
+</section>
+
+<img class="comparison-image" src="/images/cookidoo-transfer-recipe-zh-hant.jpg" alt="只需輕輕一點，就能把韭蔥馬鈴薯湯食譜從 Cookidoo 手機應用程式傳送到 TM7 觸控螢幕" loading="lazy">
+
+<h2 class="section-heading">Cookidoo 是什麼？</h2>
+<p>Cookidoo 是 Vorwerk 的官方食譜平台——可以把它想像成 TM7 專屬的食譜作業系統。您不需要自己讀食譜、猜測火候與時間，而是直接在 Cookidoo 上打開一份食譜，TM7 就會收到指令：自動設定每個步驟的時間、溫度與速度，並準確告訴您該加什麼、什麼時候加。</p>
+<p>它也不僅限於 TM7 的觸控螢幕——Cookidoo 同時提供網站與手機應用程式，讓您可以在通勤時用手機瀏覽並規劃食譜，回家後再傳送到機器上。</p>
+
+<section class="recipes-carousel-section">
+  <h2 class="section-heading">先睹為快：您能做的料理</h2>
+  <p class="section-subheading">在您的 TM7 上等著您嘗試的，是超過 10 萬份 Cookidoo 食譜中的一小部分。</p>
+  <div class="recipe-carousel">
+    <div class="recipe-carousel-track">
+      {% for card in recipeCardsZhHantLocal %}
+      <img src="/images/recipe-cards-zh-hant/{{ card.file }}.jpg" alt="Cookidoo 食譜卡：{{ card.name }}">
+      {% endfor %}
+      {% for card in recipeCardsZhHantLocal %}
+      <img src="/images/recipe-cards-zh-hant/{{ card.file }}.jpg" alt="Cookidoo 食譜卡：{{ card.name }}" aria-hidden="true">
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<h2 class="section-heading">會員可以享有的服務</h2>
+<div class="feature-grid">
+  <div class="feature">
+    <img class="feature-image" src="/images/feature-recipe-library.jpg" alt="在 TM7 觸控螢幕上搜尋泰式炒河粉食譜" loading="lazy">
+    <h3>超過 10 萬份食譜</h3>
+    <p>由 Vorwerk 與全球 Thermomix 社群測試過的食譜庫，可依食材、料理風格、飲食需求或場合進行篩選搜尋。</p>
+  </div>
+  <div class="feature">
+    <img class="feature-image" src="/images/feature-guided-cooking.jpg" alt="TM7 觸控螢幕上手動模式的引導式烹調畫面" loading="lazy">
+    <h3>引導式烹調同步</h3>
+    <p>把任何食譜直接傳送到您 TM7 的觸控螢幕上——它會全程引導每個步驟，並自動設定時間、溫度與速度。</p>
+  </div>
+  <div class="feature">
+    <img class="feature-image" src="/images/cookidoo-my-week-planner.jpg" alt="Cookidoo「我的一週」畫面，逐日顯示今天、明天與本週稍後要煮的食譜計畫" loading="lazy">
+    <h3>每週餐點規劃</h3>
+    <p>把食譜拖曳到行事曆上規劃整週菜單，Cookidoo 會記住您選過的內容，避免不小心重複煮同一道菜。</p>
+  </div>
+  <div class="feature">
+    <img class="feature-image" src="/images/cookidoo-shopping-list.jpg" alt="Cookidoo 購物清單畫面，依食譜分類列出食材，包含一道中式雞肉料理" loading="lazy">
+    <h3>自動生成購物清單</h3>
+    <p>只要規劃好一週的菜單，Cookidoo 就會把所有食譜的食材彙整成一份購物清單，直接顯示在您的手機上。</p>
+  </div>
+  <div class="feature">
+    <img class="feature-image" src="/images/cookidoo-my-recipe-lists.jpg" alt="Cookidoo「我的食譜清單」畫面，顯示書籤、最近煮過、自建食譜與收藏集" loading="lazy">
+    <h3>儲存與自訂食譜</h3>
+    <p>將喜歡的食譜加入書籤、調整份量、修改食材，並隨著時間累積打造屬於自己的食譜收藏。</p>
+  </div>
+  <div class="feature">
+    <img class="feature-image" src="/images/cookidoo-multi-device.jpg" alt="Cookidoo 同時在手機、筆記型電腦與 TM7 觸控螢幕上開啟" loading="lazy">
+    <h3>跨裝置同步使用</h3>
+    <p>可在 TM7 螢幕、Cookidoo 網站，以及 iOS 與 Android 手機應用程式上使用——您的食譜庫會跟著您走，而不只侷限於機器本身。一組 Cookidoo 帳號、一份會員資格，最多可連接五台裝置，足以讓全家人各自用自己的手機規劃與下廚。</p>
+  </div>
+</div>
+
+<img class="comparison-image" src="/images/cookidoo-remote-tracking-zh-hant.jpg" alt="透過 Cookidoo 的即時更新功能，用手機遠端追蹤 TM7 的烹調進度" loading="lazy">
+
+<h2 class="section-heading">Cookidoo 在加拿大的價格</h2>
+<div class="compare-wrap">
+  <table class="specs-table">
+    <tr><th>購買全新 TM7</th><td>附贈 3 個月免費試用</td></tr>
+    <tr><th>單獨免費試用</th><td>30 天，適用於未購買全新 TM7、直接在 Cookidoo.ca 註冊的用戶</td></tr>
+    <tr><th>年度會員資格</th><td>每年 89 加幣——以年繳計費，未提供月繳方案</td></tr>
+    <tr><th>語言</th><td>提供英文與法文版本</td></tr>
+    <tr><th>可使用平台</th><td>TM7 觸控螢幕、Cookidoo.ca（網頁版）以及 Cookidoo 手機應用程式</td></tr>
+    <tr><th>每組會員可連接裝置數</th><td>單一帳號最多可連接 5 台裝置</td></tr>
+  </table>
+</div>
+
+<div class="callout">
+  <h2>真的需要訂閱嗎？</h2>
+  <p>不需要——使用 TM7 並不強制要求訂閱 Cookidoo。就算沒有訂閱，您仍然可以手動烹調（自行設定時間、溫度與速度），並使用機器內建的預載食譜。但真正能加快整個烹調流程的，其實是 Cookidoo——自動化的引導步驟、餐點規劃與購物清單，比起手動烹調確實能省下不少時間——以每年 89 加幣來說，光是超過 10 萬份食譜的資源庫就已經物超所值。</p>
+</div>
+
+<p>就算沒有 TM7，您也可以透過網頁瀏覽器或應用程式瀏覽 Cookidoo 的食譜庫——只是無法把食譜傳送到機器上執行，因為引導式烹調功能必須在 Cookidoo 與 Thermomix 配對後才能使用。</p>
+
+<div class="cta-band">
+  <h2>準備好善用 Cookidoo 了嗎？</h2>
+  <p>每台全新 TM7 都附贈 3 個月免費 Cookidoo 試用，加上加拿大全境免運費，並有 Vorwerk 2 年保固的保障。</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">免運費購買 TM7</a>
+</div>
+
+<section class="faq-preview">
+  <h2 class="section-heading">相關內容</h2>
+  <div class="link-row">
+    <a href="/zh-hant/tm7/">查看 TM7 詳細資訊 →</a>
+    <a href="/zh-hant/accessories/">配件 →</a>
+    <a href="/zh-hant/faq/">查看所有常見問題 →</a>
+  </div>
+</section>

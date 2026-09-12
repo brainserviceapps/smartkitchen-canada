@@ -1,0 +1,18 @@
+[
+  { "file": "fr-01", "name": "Chili con carne" },
+  { "file": "fr-02", "name": "Gnocchi à l'amatriciana" },
+  { "file": "fr-03", "name": "Compote de pommes" },
+  { "file": "fr-04", "name": "Pizza diavola" },
+  { "file": "fr-05", "name": "Gratin de cornettes" },
+  { "file": "fr-06", "name": "Pain doré" },
+  { "file": "fr-07", "name": "Riz Rouge Tex-Mex" },
+  { "file": "fr-09", "name": "Soupe aux poireaux" },
+  { "file": "fr-10", "name": "Riz sauté au porc doré" },
+  { "file": "fr-11", "name": "Tarte rustique aux carottes" },
+  { "file": "fr-12", "name": "Quiche de pomme de terre" },
+  { "file": "fr-13", "name": "Poulet et pommes de terre" },
+  { "file": "fr-14", "name": "Endive au jambon" },
+  { "file": "fr-15", "name": "Tortellini à la ricotta" },
+  { "file": "fr-16", "name": "Sticks de meringue chocolat" },
+  { "file": "fr-17", "name": "Papillotes de saumon et tomates" }
+]

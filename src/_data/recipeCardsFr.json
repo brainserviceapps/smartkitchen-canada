@@ -1,0 +1,20 @@
+[
+  { "file": "margarita", "name": "Margarita à l'hibiscus jamaïcain" },
+  { "file": "chocolate-cake", "name": "Gâteau au chocolat" },
+  { "file": "tomato-soup-grilled-cheese", "name": "Soupe aux tomates et sandwich au fromage grillé" },
+  { "file": "korean-fried-chicken", "name": "Poulet frit à la coréenne" },
+  { "file": "salmon-hollandaise", "name": "Saumon, sauce hollandaise au citron" },
+  { "file": "broccoli-salad", "name": "Salade de brocoli, poivron rouge et pignons de pin" },
+  { "file": "creamy-chicken-pasta", "name": "Pâtes crémeuses au poulet et tomates séchées" },
+  { "file": "pizza-dough", "name": "Pâte à pizza" },
+  { "file": "chicken-kievs", "name": "Escalopes de poulet Kiev, faibles en glucides" },
+  { "file": "parmesan-risotto", "name": "Risotto au parmesan" },
+  { "file": "lemon-rosemary-chicken-rice", "name": "Poulet et riz au citron et romarin" },
+  { "file": "berry-dream", "name": "Rêve de petits fruits" },
+  { "file": "sticky-sesame-chicken", "name": "Poulet au sésame collant" },
+  { "file": "banana-bread", "name": "Pain aux bananes" },
+  { "file": "tomato-salami-fettuccine", "name": "Fettuccine crémeux à la tomate et au salami" },
+  { "file": "chicken-galette", "name": "Galette de poulet familiale" },
+  { "file": "thai-peanut-chicken", "name": "Poulet thaï à l'arachide, riz au coco" },
+  { "file": "paprika-chicken", "name": "Poulet au paprika, sauce à la crème sure" }
+]

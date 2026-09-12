@@ -1,0 +1,20 @@
+[
+  { "file": "margarita", "name": "牙买加洛神花玛格丽特" },
+  { "file": "chocolate-cake", "name": "巧克力蛋糕" },
+  { "file": "tomato-soup-grilled-cheese", "name": "番茄汤佐烤芝士三明治" },
+  { "file": "korean-fried-chicken", "name": "韩式炸鸡" },
+  { "file": "salmon-hollandaise", "name": "柠檬荷兰酱三文鱼" },
+  { "file": "broccoli-salad", "name": "西兰花沙拉佐红椒松子" },
+  { "file": "creamy-chicken-pasta", "name": "奶油鸡肉番茄干意大利面" },
+  { "file": "pizza-dough", "name": "披萨面团" },
+  { "file": "chicken-kievs", "name": "低碳基辅鸡排" },
+  { "file": "parmesan-risotto", "name": "帕玛森烩饭" },
+  { "file": "lemon-rosemary-chicken-rice", "name": "柠檬迷迭香鸡肉焖饭" },
+  { "file": "berry-dream", "name": "莓果之梦" },
+  { "file": "sticky-sesame-chicken", "name": "蜜汁芝麻鸡" },
+  { "file": "banana-bread", "name": "香蕉面包" },
+  { "file": "tomato-salami-fettuccine", "name": "奶油番茄萨拉米宽扁面" },
+  { "file": "chicken-galette", "name": "家庭风味鸡肉法式咸派" },
+  { "file": "thai-peanut-chicken", "name": "泰式花生鸡佐椰香饭" },
+  { "file": "paprika-chicken", "name": "红椒鸡肉佐酸奶油酱" }
+]

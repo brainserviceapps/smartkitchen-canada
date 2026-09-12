@@ -1,0 +1,105 @@
+---
+layout: base.njk
+title: Events
+description: Register and join live Thermomix cooking demos to see the TM7 in action and ask questions in real time.
+permalink: /events/
+---
+
+<section class="hero">
+  <span class="eyebrow">Events</span>
+  <h1>Live Thermomix Cooking Demos</h1>
+  <p class="lede">Register and join live Thermomix cooking demos to see the TM7 in action and ask questions in real time. Reach out directly if you'd like to be notified for the next session, or click on any session in the calendar to register.</p>
+  <div class="trust-row">
+    <span>Open to Canadian residents only</span>
+    <span>Held in English only</span>
+  </div>
+</section>
+
+<h2 class="section-heading">Upcoming Sessions</h2><div class="calendar-wrap">
+  <div class="calendar-nav-row">
+    <button type="button" class="calendar-nav" id="calendar-prev" aria-label="Previous month">‹</button>
+    <p class="calendar-month" id="calendar-month-label"></p>
+    <button type="button" class="calendar-nav" id="calendar-next" aria-label="Next month">›</button>
+  </div>
+  <div class="calendar" id="calendar-grid">
+    <div class="calendar-weekday">Sun</div>
+    <div class="calendar-weekday">Mon</div>
+    <div class="calendar-weekday">Tue</div>
+    <div class="calendar-weekday">Wed</div>
+    <div class="calendar-weekday">Thu</div>
+    <div class="calendar-weekday">Fri</div>
+    <div class="calendar-weekday">Sat</div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var monthLabel = document.getElementById('calendar-month-label');
+    var grid = document.getElementById('calendar-grid');
+    var prevBtn = document.getElementById('calendar-prev');
+    var nextBtn = document.getElementById('calendar-next');
+    var monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var today = new Date();
+    var currentYear = today.getFullYear();
+    var currentMonth = today.getMonth();
+    var viewYear = currentYear;
+    var viewMonth = currentMonth;
+
+    function render() {
+      while (grid.children.length > 7) {
+        grid.removeChild(grid.lastChild);
+      }
+      monthLabel.textContent = monthNames[viewMonth] + ' ' + viewYear;
+      var isCurrentMonth = viewYear === currentYear && viewMonth === currentMonth;
+      prevBtn.disabled = isCurrentMonth;
+      var firstDay = new Date(viewYear, viewMonth, 1).getDay();
+      var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      for (var i = 0; i < firstDay; i++) {
+        var empty = document.createElement('div');
+        empty.className = 'calendar-day calendar-day--empty';
+        grid.appendChild(empty);
+      }
+      for (var d = 1; d <= daysInMonth; d++) {
+        var cell = document.createElement('div');
+        cell.className = 'calendar-day';
+        cell.textContent = d;
+        grid.appendChild(cell);
+      }
+    }
+
+    prevBtn.addEventListener('click', function () {
+      if (viewYear === currentYear && viewMonth === currentMonth) { return; }
+      viewMonth -= 1;
+      if (viewMonth < 0) { viewMonth = 11; viewYear -= 1; }
+      render();
+    });
+    nextBtn.addEventListener('click', function () {
+      viewMonth += 1;
+      if (viewMonth > 11) { viewMonth = 0; viewYear += 1; }
+      render();
+    });
+
+    render();
+  })();
+</script>
+
+<div class="cta-band">
+  <h2>Want to Be Notified for the Next Session?</h2>
+  <p>Email me directly and I'll let you know as soon as the next demo is scheduled.</p>
+  <a class="cta-button large" href="mailto:{{ site.contactEmail }}">Email {{ site.consultantName }}</a>
+</div>
+
+<div class="cta-band">
+  <h2>Ready to Transform Your Kitchen?</h2>
+  <p>Get the Thermomix TM7 delivered anywhere in Canada with free shipping, backed by Vorwerk's 2-year warranty.</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">Get Free Shipping on the TM7</a>
+</div>
+
+<section class="faq-preview">
+  <h2 class="section-heading">Explore</h2>
+  <div class="link-row">
+    <a href="/tm7/">See TM7 details →</a>
+    <a href="/reviews/">Reviews →</a>
+    <a href="/faq/">See all FAQs →</a>
+  </div>
+</section>

@@ -1,0 +1,207 @@
+---
+layout: base.njk
+title: TM7 Canada | Free Shipping Through My Consultant Link
+description: The Thermomix TM7 in Canada — price, features, and free shipping through my consultant link.
+---
+
+<section class="hero">
+  <span class="eyebrow">Thermomix TM7 Canada: Now Available</span>
+  <h1>{{ site.tagline }}</h1>
+  <p class="lede">The all-in-one smart appliance that replaces 20 kitchen gadgets, plans your meals, and guides you step by step to a finished dish. Order through my link for free shipping anywhere in Canada.</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">Get Free Shipping & See the TM7</a>
+  <div class="trust-row">
+    <a href="/reviews/#awards">iF Design Award 2026 winner</a>
+    <span>2-year Vorwerk warranty</span>
+    <span>Returns on unopened items</span>
+    <span>Free shipping, every province</span>
+  </div>
+</section>
+
+<section class="promotions" id="promotions">
+  <h2 class="section-heading">Thermomix Promotions & Perks</h2>
+  <p class="section-subheading">Vorwerk rotates promotions on the TM7 throughout the year — here's what to look for, and what's always true. No coupon-code hunting required.</p>
+  <div class="promo-grid">
+    <div class="promo-card">
+      <div class="promo-card-badges">
+        <span class="promo-tag">Periodic</span>
+      </div>
+      <div class="promo-highlight">0% APR</div>
+      <h3>0% Financing on the TM7</h3>
+      <p>Vorwerk periodically opens 0% APR financing on the TM7 through PayPlan by RBC or Affirm, with standard rates otherwise. Click through to my link to see whether it's open right now and what the payments work out to.</p>
+    </div>
+    <div class="promo-card">
+      <div class="promo-card-badges">
+        <span class="promo-tag">Periodic</span>
+      </div>
+      <div class="promo-highlight">Bundle Deal</div>
+      <h3>Cutter+ Bundle with a TM7</h3>
+      <p>The Cutter+ slices and grates straight into the mixing bowl — the one prep job the blades don't do well. Vorwerk periodically discounts it when it's added to the same order as a new TM7. Click through to my link for the current bundle price.</p>
+    </div>
+    <div class="promo-card">
+      <div class="promo-card-badges">
+        <span class="badge">Always via my consultant link</span>
+      </div>
+      <div class="promo-highlight">Free Shipping</div>
+      <h3>Shipping Fee Waived</h3>
+      <p>Vorwerk's standard TM7 shipping fee is waived automatically when you order through my consultant link — no code needed, to every Canadian province.</p>
+    </div>
+  </div>
+  <p class="section-subheading">Free shipping applies every time you order through my link, no exceptions. Financing and bundle offers come and go — click through any button on this page to see exactly what's live right now.</p>
+</section>
+
+<div class="skip-demo">
+  <div class="skip-demo-icon">⚡</div>
+  <div class="skip-demo-content">
+    <h3>Already sold on the TM7?</h3>
+    <p>If you've seen it on TikTok, YouTube, or Instagram — or already read up on the specs and price — order directly through my link and get the same current pricing and promotions instantly, plus free shipping you won't get by checking out without a consultant.</p>
+  </div>
+  <a class="cta-button" href="{{ site.consultantLink }}">Buy Now</a>
+</div>
+
+<section class="declutter">
+  <h2 class="section-heading">From a Cluttered Counter to One Smart Appliance</h2>
+  <p class="section-subheading">The TM7 replaces more than 20 separate gadgets — less clutter, and less money spent on things you'll use twice a year.</p>
+  <img class="comparison-image" src="/images/before-after-declutter.jpg" alt="Before: a cluttered counter with a blender, stand mixer, food processor, slow cooker, and more. After: the Thermomix TM7, one smart appliance replacing them all." loading="lazy">
+</section>
+
+<section class="features">
+  <h2 class="section-heading">Why the TM7</h2>
+  <div class="feature-grid">
+    <div class="feature">
+      <img class="feature-image" src="/images/feature-guided-cooking.jpg" alt="Guided Cooking on the TM7 touchscreen in Manual Mode" loading="lazy">
+      <h3>Guided Cooking</h3>
+      <p>Every recipe runs step by step on the touchscreen — time, temperature, and speed set automatically.</p>
+    </div>
+    <div class="feature">
+      <img class="feature-image" src="/images/feature-20-in-1.jpg" alt="The TM7 base, bowl, and Varoma set replacing 20+ kitchen appliances" loading="lazy">
+      <h3>20+ Appliances in One</h3>
+      <p>Blender, food processor, stand mixer, slow cooker, steamer, and more, replaced by one countertop unit.</p>
+    </div>
+    <div class="feature">
+      <img class="feature-image" src="/images/feature-recipe-library.jpg" alt="Searching Pad Thai recipes on the TM7 touchscreen" loading="lazy">
+      <h3>100,000+ Recipes</h3>
+      <p>Cookidoo connects directly to your TM7 with a huge tested recipe library and built-in meal planning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cookidoo-showcase">
+  <h2 class="section-heading">Your Recipe Book Never Runs Out</h2>
+  <p class="section-subheading">Cookidoo connects straight to your TM7's touchscreen with 100,000+ tested recipes. Browse by mood or ingredient, drop meals into a weekly planner, and the TM7 turns your plan into a shopping list automatically. When it's time to cook, the screen walks you through every step — no guessing at temperature or timing.</p>
+  <div class="recipe-carousel">
+    <div class="recipe-carousel-track">
+      {% for card in recipeCards %}
+      <img src="/images/recipe-cards/{{ card.file }}.jpg" alt="Cookidoo recipe card: {{ card.name }}" width="380" height="580">
+      {% endfor %}
+      {% for card in recipeCards %}
+      <img src="/images/recipe-cards/{{ card.file }}.jpg" alt="Cookidoo recipe card: {{ card.name }}" width="380" height="580" aria-hidden="true">
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="box-contents">
+  <h2 class="section-heading">Everything You Need, Right in the Box</h2>
+  <img class="comparison-image" src="/images/whats-in-the-box.jpg" alt="What's in the box: Varoma set, lid cap, mixing bowl lid, simmering basket, mixing knife, TM7 mixing bowl, knife locking lever, Thermomix base, spatula, butterfly whisk, 10-inch multi-touch display, and Vorwerk synchronous motor" loading="lazy">
+  <p class="section-subheading">Every TM7 also includes a free 3-month Cookidoo trial, and free shipping across Canada when you order through my consultant link.</p>
+</section>
+
+<section class="pro-kitchens">
+  <h2 class="section-heading">Trusted by Professional Kitchens</h2>
+  <p class="section-subheading">Real chefs, real credentials, real sources — straight from Vorwerk's own official chef features.</p>
+  <div class="review-list">
+    <div class="review">
+      <p class="review-quote">"I think the thing that intrigued me most about using the Thermomix is the detail about the precise, of the timing, about the texture in the desserts. The Thermomix inspires me to try every day to do something different."</p>
+      <div class="review-author">
+        <span>Antonio Bachour, Bachour Miami — Esquire's 2019 Pastry Chef of the Year</span>
+      </div>
+    </div>
+    <div class="review">
+      <p class="review-quote">"I absolutely love my Thermomix®. I often call it my very own apprentice that never misses the temperature!"</p>
+      <div class="review-author">
+        <span>Christy Tania, Owner, Glacé (Melbourne)</span>
+      </div>
+    </div>
+    <div class="review">
+      <p class="review-quote">"We have one at home, one at the restaurant, and an older one in storage that we use as backup!"</p>
+      <div class="review-author">
+        <span>Kane Pollard, Chef/Owner, Topiary</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-teaser">
+  <h2 class="section-heading">What TM7 Owners Are Saying</h2>
+  <div class="rating-summary">
+    <span class="stars">★★★★★</span>
+    <span class="rating-score">4.6/5</span>
+    <span class="rating-count">from 618 reviews on thermomix.ca</span>
+  </div>
+  <div class="review-list">
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <p class="review-quote">"Love it. I have used it 3 times. I peeled garlic, made tomato soup & chicken Marsala — it was amazing how it worked! I am having a lot of fun checking out so many different recipes, which is great for me since I love to cook. Great machine."</p>
+      <div class="review-author">
+        <span>Cary T. · via thermomix.ca</span>
+      </div>
+    </div>
+    <div class="review">
+      <span class="stars">★★★★★</span>
+      <p class="review-quote">"Already an owner of a TM5 & TM6, this purchase was for my daughter and son-in-law, and in their words I nailed it! Two weeks of ownership and they have enjoyed so many restaurant quality meals easily prepared at home. Amazingly versatile machine."</p>
+      <div class="review-author">
+        <span>Anne S. · via thermomix.ca</span>
+      </div>
+    </div>
+  </div>
+  <p class="section-subheading"><a href="/reviews/">Read more reviews →</a></p>
+</section>
+
+<div class="about-teaser">
+  <img class="about-teaser-avatar" src="/images/maggie-profile.jpg" alt="{{ site.consultantName }}">
+  <div class="about-teaser-content">
+    <h2>Hi, I'm {{ site.consultantName }} 👋</h2>
+    <p>I'm a Thermomix®️ Independent Consultant based in the Toronto Area, a foodie, and a mom of two who loves cooking—but doesn't always love the work that comes with it.</p>
+    <p>When I discovered the TM7, I was surprised by how well it fit the way our family actually cooks, from Asian dishes and congee to Italian pasta and everyday family meals. Even better, it got my daughters involved in the kitchen and gave my mother-in-law the confidence to explore recipes from around the world.</p>
+    <p>I created this site to share my real experience with the TM7—what I love, what surprised me, what I think could be better, and who I don't think needs one.</p>
+    <p>No pressure. Just an honest look at whether the TM7 is right for you.</p>
+  </div>
+</div>
+
+<section class="faq-preview">
+  <h2 class="section-heading">Explore</h2>
+  <div class="link-row">
+    <a href="/tm7/">See TM7 details →</a>
+    <a href="/tm7-vs-tm6/">TM7 vs TM6 →</a>
+    <a href="/accessories/">Accessories →</a>
+    <a href="/where-to-buy/">Where to buy →</a>
+    <a href="/reviews/">Reviews →</a>
+  </div>
+</section>
+
+<section class="faq-preview">
+  <h2>Common Questions</h2>
+
+  <details>
+    <summary>How much does the Thermomix TM7 cost in Canada?</summary>
+    <p>The Thermomix TM7 is priced at $2,299 CAD before tax. Vorwerk also offers financing through Affirm or PayPlan by RBC for qualifying customers — rates vary, and 0% APR only applies when that promotion is live. See <a href="#promotions">current promotions</a> for what's active right now.</p>
+  </details>
+
+  <details>
+    <summary>Is free shipping really free?</summary>
+    <p>Yes — free shipping across Canada is available when you order through my consultant link. Vorwerk's standard shipping fee is waived automatically at checkout.</p>
+  </details>
+
+  <details>
+    <summary>Where can I buy a Thermomix in Canada?</summary>
+    <p>Thermomix is sold exclusively through independent Vorwerk consultants — you won't find it at Costco, Amazon, Best Buy, or any retail store. This consultant-only model is how Vorwerk keeps pricing consistent nationwide and guarantees authentic Canadian warranty coverage.</p>
+  </details>
+
+  <p><a href="/faq/">See all FAQs →</a></p>
+</section>
+
+<div class="cta-band">
+  <h2>Ready to Transform Your Kitchen?</h2>
+  <p>Get the Thermomix TM7 delivered anywhere in Canada with free shipping, backed by Vorwerk's 2-year warranty.</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">Get Free Shipping on the TM7</a>
+</div>

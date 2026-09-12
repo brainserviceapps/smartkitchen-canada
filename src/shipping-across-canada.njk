@@ -1,0 +1,80 @@
+---
+layout: base.njk
+title: Thermomix Delivery Across Canada — Every Province & City
+description: Thermomix isn't sold in stores anywhere in Canada. See how free shipping works to every province and major city, from Toronto to Winnipeg to PEI.
+permalink: /shipping-across-canada/
+---
+
+{% set locationFaqs = [
+  { "q": "Is there a Thermomix store in Toronto?", "a": "No — Thermomix isn't sold in any physical store in Toronto or anywhere else in Canada. It's sold exclusively through independent Vorwerk consultants. Order through my consultant link and Vorwerk ships to any Toronto address with the standard shipping fee waived." },
+  { "q": "Can I buy a Thermomix in Winnipeg?", "a": "Yes. Thermomix ships to Winnipeg and the rest of Manitoba the same way it ships everywhere in Canada — through a Vorwerk consultant, with free shipping when you order through my link." },
+  { "q": "Is Thermomix available in PEI?", "a": "Yes — Prince Edward Island gets the same free shipping and full Vorwerk warranty as every other province. There's no in-store option anywhere in Atlantic Canada, so ordering online through a consultant is the only way to buy one, PEI included." },
+  { "q": "Does Thermomix ship to Western Canada (BC, Alberta, Saskatchewan, Manitoba)?", "a": "Yes. British Columbia, Alberta, Saskatchewan, and Manitoba — including Vancouver, Calgary, Edmonton, Saskatoon, Regina, and Winnipeg — all qualify for the same free shipping through my consultant link." },
+  { "q": "Does Thermomix ship to Atlantic Canada (Nova Scotia, New Brunswick, PEI, Newfoundland)?", "a": "Yes. Nova Scotia, New Brunswick, Prince Edward Island, and Newfoundland and Labrador — Halifax, Saint John, Fredericton, Moncton, Charlottetown, and St. John's included — all get free shipping through my consultant link, same as the rest of Canada." },
+  { "q": "Does Thermomix ship to Quebec?", "a": "Yes. Quebec — Montreal, Quebec City, Laval, and Gatineau included — gets the same free shipping as every other province. The TM7's touchscreen and the Cookidoo recipe platform are both fully available in French." },
+  { "q": "Does Thermomix ship to the Yukon, Northwest Territories, or Nunavut?", "a": "Yes, Vorwerk ships to all three territories. Delivery to more remote communities can take longer than to major cities, so it's worth confirming an estimated delivery window with your consultant before ordering." }
+] %}
+
+<script type="application/ld+json">{{ [{ "items": locationFaqs }] | faqSchema | safe }}</script>
+
+<section class="hero">
+  <span class="eyebrow">Where We Ship</span>
+  <h1>Thermomix Delivery Across Canada</h1>
+  <p class="lede">Thermomix isn't sold in a single physical store anywhere in Canada — it ships directly from Vorwerk to every province and territory through independent consultants like me. It doesn't matter whether you're in Toronto or Iqaluit: the buying process, the price, and the warranty are identical.</p>
+</section>
+
+<h2 class="section-heading">Every Province & Territory</h2>
+<p class="section-subheading">Free TM7 shipping through my consultant link applies everywhere on this list — no exceptions.</p>
+<div class="compare-wrap">
+  <table class="specs-table">
+    <thead>
+      <tr>
+        <th>Province / Territory</th>
+        <th>Major Cities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Ontario</td><td>Toronto, Ottawa, Hamilton, Mississauga, London</td></tr>
+      <tr><td>Quebec</td><td>Montreal, Quebec City, Laval, Gatineau</td></tr>
+      <tr><td>British Columbia</td><td>Vancouver, Victoria, Surrey, Kelowna</td></tr>
+      <tr><td>Alberta</td><td>Calgary, Edmonton, Red Deer</td></tr>
+      <tr><td>Manitoba</td><td>Winnipeg, Brandon</td></tr>
+      <tr><td>Saskatchewan</td><td>Saskatoon, Regina</td></tr>
+      <tr><td>Nova Scotia</td><td>Halifax, Sydney</td></tr>
+      <tr><td>New Brunswick</td><td>Saint John, Fredericton, Moncton</td></tr>
+      <tr><td>Prince Edward Island</td><td>Charlottetown</td></tr>
+      <tr><td>Newfoundland and Labrador</td><td>St. John's</td></tr>
+      <tr><td>Yukon</td><td>Whitehorse</td></tr>
+      <tr><td>Northwest Territories</td><td>Yellowknife</td></tr>
+      <tr><td>Nunavut</td><td>Iqaluit</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="callout">
+  <h2>No Storefronts, Anywhere</h2>
+  <p>This isn't a Toronto-only or Ontario-only thing — Thermomix has never had retail stores in Canada, full stop. That's true whether you're a five-minute drive from downtown Vancouver or a two-hour flight from the nearest city in Nunavut. The only real difference by location is delivery time, not price, process, or warranty coverage.</p>
+</div>
+
+<h2 class="section-heading">Common Questions by Region</h2>
+{% for item in locationFaqs %}
+<details>
+  <summary>{{ item.q }}</summary>
+  <p>{{ item.a }}</p>
+</details>
+{% endfor %}
+
+<div class="cta-band">
+  <h2>Ready to Order, Wherever You Are?</h2>
+  <p>Get the Thermomix TM7 delivered anywhere in Canada with free shipping, backed by Vorwerk's 2-year warranty.</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">Get Free Shipping on the TM7</a>
+</div>
+
+<section class="faq-preview">
+  <h2 class="section-heading">Related</h2>
+  <div class="link-row">
+    <a href="/where-to-buy/">Where to buy →</a>
+    <a href="/tm7/">See TM7 details →</a>
+    <a href="/faq/">See all FAQs →</a>
+  </div>
+</section>

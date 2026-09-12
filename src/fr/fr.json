@@ -1,0 +1,20 @@
+{
+  "lang": "fr",
+  "langPrefix": "/fr",
+  "nav": {
+    "home": "Accueil",
+    "tm7": "TM7",
+    "accessories": "Accessoires",
+    "cookidoo": "Cookidoo",
+    "tm7vstm6": "TM7 vs TM6",
+    "whereToBuy": "Où acheter",
+    "reviews": "Avis",
+    "events": "Événements",
+    "faq": "FAQ"
+  },
+  "strings": {
+    "getFreeShipping": "Livraison gratuite",
+    "privacyPolicy": "Politique de confidentialité",
+    "disclosure": "Ceci est une page offerte par une consultante indépendante Thermomix®. Il ne s'agit pas d'un site officiel de Vorwerk ou de Thermomix® Canada. Thermomix® et Cookidoo® sont des marques déposées de Vorwerk. Toutes les marques appartiennent à leurs propriétaires respectifs."
+  }
+}

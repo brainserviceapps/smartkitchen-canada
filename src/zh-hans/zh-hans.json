@@ -1,0 +1,20 @@
+{
+  "lang": "zh-hans",
+  "langPrefix": "/zh-hans",
+  "nav": {
+    "home": "首页",
+    "tm7": "TM7",
+    "accessories": "配件",
+    "cookidoo": "Cookidoo",
+    "tm7vstm6": "TM7 对比 TM6",
+    "whereToBuy": "哪里购买",
+    "reviews": "评论",
+    "events": "活动",
+    "faq": "常见问题"
+  },
+  "strings": {
+    "getFreeShipping": "免费运送",
+    "privacyPolicy": "隐私政策",
+    "disclosure": "本页面由独立 Thermomix® 顾问提供，并非 Vorwerk 或加拿大 Thermomix® 的官方网站。Thermomix® 与 Cookidoo® 为 Vorwerk 的注册商标，所有商标均属其各自所有者所有。"
+  }
+}

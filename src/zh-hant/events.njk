@@ -1,0 +1,105 @@
+---
+layout: base.njk
+title: 活動
+description: 報名參加 Thermomix 線上直播烹飪示範，即時觀看 TM7 實際操作並提出您的問題。
+permalink: /zh-hant/events/
+---
+
+<section class="hero">
+  <span class="eyebrow">活動</span>
+  <h1>Thermomix 直播烹飪示範</h1>
+  <p class="lede">報名參加 Thermomix 線上直播烹飪示範，即時觀看 TM7 實際操作並提出您的問題。若想收到下一場活動的通知，歡迎直接與我聯繫，或點擊行事曆中的任一場次進行報名。</p>
+  <div class="trust-row">
+    <span>僅限加拿大居民參加</span>
+    <span>僅提供英語進行</span>
+  </div>
+</section>
+
+<h2 class="section-heading">近期場次</h2><div class="calendar-wrap">
+  <div class="calendar-nav-row">
+    <button type="button" class="calendar-nav" id="calendar-prev" aria-label="上個月">‹</button>
+    <p class="calendar-month" id="calendar-month-label"></p>
+    <button type="button" class="calendar-nav" id="calendar-next" aria-label="下個月">›</button>
+  </div>
+  <div class="calendar" id="calendar-grid">
+    <div class="calendar-weekday">日</div>
+    <div class="calendar-weekday">一</div>
+    <div class="calendar-weekday">二</div>
+    <div class="calendar-weekday">三</div>
+    <div class="calendar-weekday">四</div>
+    <div class="calendar-weekday">五</div>
+    <div class="calendar-weekday">六</div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var monthLabel = document.getElementById('calendar-month-label');
+    var grid = document.getElementById('calendar-grid');
+    var prevBtn = document.getElementById('calendar-prev');
+    var nextBtn = document.getElementById('calendar-next');
+    var monthNames = ['1 月','2 月','3 月','4 月','5 月','6 月','7 月','8 月','9 月','10 月','11 月','12 月'];
+    var today = new Date();
+    var currentYear = today.getFullYear();
+    var currentMonth = today.getMonth();
+    var viewYear = currentYear;
+    var viewMonth = currentMonth;
+
+    function render() {
+      while (grid.children.length > 7) {
+        grid.removeChild(grid.lastChild);
+      }
+      monthLabel.textContent = viewYear + ' 年 ' + monthNames[viewMonth];
+      var isCurrentMonth = viewYear === currentYear && viewMonth === currentMonth;
+      prevBtn.disabled = isCurrentMonth;
+      var firstDay = new Date(viewYear, viewMonth, 1).getDay();
+      var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      for (var i = 0; i < firstDay; i++) {
+        var empty = document.createElement('div');
+        empty.className = 'calendar-day calendar-day--empty';
+        grid.appendChild(empty);
+      }
+      for (var d = 1; d <= daysInMonth; d++) {
+        var cell = document.createElement('div');
+        cell.className = 'calendar-day';
+        cell.textContent = d;
+        grid.appendChild(cell);
+      }
+    }
+
+    prevBtn.addEventListener('click', function () {
+      if (viewYear === currentYear && viewMonth === currentMonth) { return; }
+      viewMonth -= 1;
+      if (viewMonth < 0) { viewMonth = 11; viewYear -= 1; }
+      render();
+    });
+    nextBtn.addEventListener('click', function () {
+      viewMonth += 1;
+      if (viewMonth > 11) { viewMonth = 0; viewYear += 1; }
+      render();
+    });
+
+    render();
+  })();
+</script>
+
+<div class="cta-band">
+  <h2>想收到下一場活動的通知嗎？</h2>
+  <p>直接發送電子郵件給我，下一場示範活動確定時間後，我會盡快通知您。</p>
+  <a class="cta-button large" href="mailto:{{ site.contactEmail }}">寫信給 {{ site.consultantName }}</a>
+</div>
+
+<div class="cta-band">
+  <h2>準備好改造您的廚房了嗎？</h2>
+  <p>透過免運費的方式，將 Thermomix TM7 送到加拿大任何地方，並享有 Vorwerk 2 年保固的保障。</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">免運費購買 TM7</a>
+</div>
+
+<section class="faq-preview">
+  <h2 class="section-heading">探索更多</h2>
+  <div class="link-row">
+    <a href="/zh-hant/tm7/">查看 TM7 詳細資訊 →</a>
+    <a href="/zh-hant/reviews/">評論 →</a>
+    <a href="/zh-hant/faq/">查看所有常見問題 →</a>
+  </div>
+</section>

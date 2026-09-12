@@ -1,0 +1,14 @@
+<section class="recipes-carousel-section">
+  <h2 class="section-heading">Just a Taste of What You Can Cook</h2>
+  <p class="section-subheading">A few of the 100,000+ Cookidoo recipes waiting on your TM7.</p>
+  <div class="recipe-carousel">
+    <div class="recipe-carousel-track">
+      {% for card in recipeCards %}
+      <img src="/images/recipe-cards/{{ card.file }}.jpg" alt="Cookidoo recipe card: {{ card.name }}" width="380" height="580">
+      {% endfor %}
+      {% for card in recipeCards %}
+      <img src="/images/recipe-cards/{{ card.file }}.jpg" alt="Cookidoo recipe card: {{ card.name }}" width="380" height="580" aria-hidden="true">
+      {% endfor %}
+    </div>
+  </div>
+</section>

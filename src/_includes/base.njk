@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="{{ 'zh-Hant' if lang == 'zh-hant' else ('zh-Hans' if lang == 'zh-hans' else (lang or 'en')) }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | {{ site.siteName }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ site.siteUrl }}{{ page.url }}">
+  <link rel="alternate" hreflang="en" href="{{ site.siteUrl }}{{ page.url | localizedUrl('en') }}">
+  <link rel="alternate" hreflang="fr-ca" href="{{ site.siteUrl }}{{ page.url | localizedUrl('fr') }}">
+  <link rel="alternate" hreflang="zh-hant" href="{{ site.siteUrl }}{{ page.url | localizedUrl('zh-hant') }}">
+  <link rel="alternate" hreflang="zh-hans" href="{{ site.siteUrl }}{{ page.url | localizedUrl('zh-hans') }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.siteUrl }}{{ page.url | localizedUrl('en') }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.siteName }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ site.siteUrl }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.siteUrl }}{{ ogImage | default('/images/tm7-hero.jpg') }}">
+  <meta property="og:locale" content="{{ 'fr_CA' if lang == 'fr' else ('zh_TW' if lang == 'zh-hant' else ('zh_CN' if lang == 'zh-hans' else 'en_CA')) }}">
+  <meta property="og:locale:alternate" content="en_CA">
+  <meta property="og:locale:alternate" content="fr_CA">
+  <meta property="og:locale:alternate" content="zh_TW">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ site.siteUrl }}{{ ogImage | default('/images/tm7-hero.jpg') }}">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="{{ langPrefix | default('') }}/" class="logo"><img src="/images/logo.png" alt="{{ site.siteName }}"></a>
+    <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <div class="lang-switch-mobile" role="group" aria-label="Language">
+        <a href="{{ page.url | localizedUrl('en') }}" class="lang-option-mobile {{ 'is-active' if not lang or lang == 'en' }}">EN</a>
+        <a href="{{ page.url | localizedUrl('fr') }}" class="lang-option-mobile {{ 'is-active' if lang == 'fr' }}">FR</a>
+        <a href="{{ page.url | localizedUrl('zh-hant') }}" class="lang-option-mobile {{ 'is-active' if lang == 'zh-hant' }}">繁中</a>
+        <a href="{{ page.url | localizedUrl('zh-hans') }}" class="lang-option-mobile {{ 'is-active' if lang == 'zh-hans' }}">简中</a>
+      </div>
+      <a href="{{ langPrefix | default('') }}/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/' }}">{{ nav.home | default('Home') }}</a>
+      <a href="{{ langPrefix | default('') }}/tm7/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/tm7/' }}">{{ nav.tm7 | default('TM7') }}</a>
+      <a href="{{ langPrefix | default('') }}/accessories/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/accessories/' }}">{{ nav.accessories | default('Accessories') }}</a>
+      <a href="{{ langPrefix | default('') }}/cookidoo/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/cookidoo/' }}">{{ nav.cookidoo | default('Cookidoo') }}</a>
+      <a href="{{ langPrefix | default('') }}/tm7-vs-tm6/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/tm7-vs-tm6/' }}">{{ nav.tm7vstm6 | default('TM7 vs TM6') }}</a>
+      <a href="{{ langPrefix | default('') }}/where-to-buy/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/where-to-buy/' }}">{{ nav.whereToBuy | default('Where to Buy') }}</a>
+      <a href="{{ langPrefix | default('') }}/reviews/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/reviews/' }}">{{ nav.reviews | default('Reviews') }}</a>
+      <a href="{{ langPrefix | default('') }}/events/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/events/' }}">{{ nav.events | default('Events') }}</a>
+      <a href="{{ langPrefix | default('') }}/faq/" class="{{ 'active' if page.url == (langPrefix | default('')) + '/faq/' }}">{{ nav.faq | default('FAQ') }}</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button type="button" class="lang-switch-toggle" id="lang-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="lang-menu">
+          <span>{{ 'FR' if lang == 'fr' else ('繁中' if lang == 'zh-hant' else ('简中' if lang == 'zh-hans' else 'EN')) }}</span>
+          <span class="lang-caret">▾</span>
+        </button>
+        <div class="lang-menu" id="lang-menu">
+          <a href="{{ page.url | localizedUrl('en') }}" class="lang-option {{ 'is-active' if not lang or lang == 'en' }}">English <span class="lang-option-badge">EN</span></a>
+          <a href="{{ page.url | localizedUrl('fr') }}" class="lang-option {{ 'is-active' if lang == 'fr' }}">Français <span class="lang-option-badge">FR</span></a>
+          <a href="{{ page.url | localizedUrl('zh-hant') }}" class="lang-option {{ 'is-active' if lang == 'zh-hant' }}">繁體中文 <span class="lang-option-badge">繁中</span></a>
+          <a href="{{ page.url | localizedUrl('zh-hans') }}" class="lang-option {{ 'is-active' if lang == 'zh-hans' }}">简体中文 <span class="lang-option-badge">简中</span></a>
+        </div>
+      </div>
+
+      <a class="cta-button" href="{{ site.consultantLink }}">{{ strings.getFreeShipping | default('Get Free Shipping') }}</a>
+    </div>
+  </header>
+
+  <script>
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      var nav = document.getElementById('site-nav');
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('is-open');
+          toggle.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    (function () {
+      var langToggle = document.getElementById('lang-toggle');
+      var langMenu = document.getElementById('lang-menu');
+      if (!langToggle || !langMenu) return;
+      langToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = langMenu.classList.toggle('is-open');
+        langToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      document.addEventListener('click', function (e) {
+        if (!langMenu.contains(e.target) && e.target !== langToggle) {
+          langMenu.classList.remove('is-open');
+          langToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p class="disclosure">
+      {{ strings.disclosure | default("This is an offer page from an independent Thermomix® consultant. It is not an official website of Vorwerk or Thermomix® Canada. Thermomix® and Cookidoo® are registered trademarks of Vorwerk. All trademarks are the property of their respective owners.") }}
+    </p>
+
+    <p class="footer-links">
+      <a href="{{ langPrefix | default('') }}/privacy-policy/">{{ strings.privacyPolicy | default('Privacy Policy') }}</a> ·
+      <a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a>
+    </p>
+  </footer>
+
+</body>
+</html>

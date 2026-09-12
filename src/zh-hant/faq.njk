@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Thermomix TM7 常見問題｜價格、與 TM6 比較及購買地點
+description: 解答關於 Thermomix TM7 最常被搜尋的問題——加拿大價格、TM7 與 TM6 的差異、Cookidoo、保固、內容物，以及哪裡可以購買。
+permalink: /zh-hant/faq/
+---
+
+<script type="application/ld+json">{{ faqSectionsZhHant | faqSchema | safe }}</script>
+
+<section class="hero">
+  <span class="eyebrow">常見問題</span>
+  <h1>Thermomix TM7 常見問題</h1>
+  <p class="lede">在加拿大購買 Thermomix TM7 之前，大家最常問的問題都在這裡——價格、與 TM6 的比較、Cookidoo、保固，以及如何訂購。</p>
+</section>
+
+{% for section in faqSectionsZhHant %}
+<section class="faq-preview">
+  <h2 class="section-heading">{{ section.heading }}</h2>
+  {% for item in section.items %}
+  <details>
+    <summary>{{ item.q }}</summary>
+    <p>{{ item.a }}</p>
+  </details>
+  {% endfor %}
+</section>
+{% endfor %}
+
+<div class="cta-band">
+  <h2>找到您需要的答案了嗎？</h2>
+  <p>如果這些內容已經解答了您的疑問，歡迎透過我的連結訂購，享有加拿大全境免運費，並有 Vorwerk 2 年保固的保障——如果還有其他問題，也歡迎直接與我聯繫。</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">免運費購買 TM7</a>
+</div>

@@ -1,0 +1,105 @@
+---
+layout: base.njk
+title: Événements
+description: Inscrivez-vous et participez à des démonstrations de cuisine Thermomix en direct pour voir le TM7 en action et poser vos questions en temps réel.
+permalink: /fr/events/
+---
+
+<section class="hero">
+  <span class="eyebrow">Événements</span>
+  <h1>Démonstrations de cuisine Thermomix en direct</h1>
+  <p class="lede">Inscrivez-vous et participez à des démonstrations de cuisine Thermomix en direct pour voir le TM7 en action et poser vos questions en temps réel. Communiquez avec moi directement si vous voulez être avisé de la prochaine séance, ou cliquez sur une séance dans le calendrier pour vous inscrire.</p>
+  <div class="trust-row">
+    <span>Réservé aux résidents canadiens</span>
+    <span>Offert en anglais seulement</span>
+  </div>
+</section>
+
+<h2 class="section-heading">Séances à venir</h2><div class="calendar-wrap">
+  <div class="calendar-nav-row">
+    <button type="button" class="calendar-nav" id="calendar-prev" aria-label="Mois précédent">‹</button>
+    <p class="calendar-month" id="calendar-month-label"></p>
+    <button type="button" class="calendar-nav" id="calendar-next" aria-label="Mois suivant">›</button>
+  </div>
+  <div class="calendar" id="calendar-grid">
+    <div class="calendar-weekday">Dim</div>
+    <div class="calendar-weekday">Lun</div>
+    <div class="calendar-weekday">Mar</div>
+    <div class="calendar-weekday">Mer</div>
+    <div class="calendar-weekday">Jeu</div>
+    <div class="calendar-weekday">Ven</div>
+    <div class="calendar-weekday">Sam</div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var monthLabel = document.getElementById('calendar-month-label');
+    var grid = document.getElementById('calendar-grid');
+    var prevBtn = document.getElementById('calendar-prev');
+    var nextBtn = document.getElementById('calendar-next');
+    var monthNames = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+    var today = new Date();
+    var currentYear = today.getFullYear();
+    var currentMonth = today.getMonth();
+    var viewYear = currentYear;
+    var viewMonth = currentMonth;
+
+    function render() {
+      while (grid.children.length > 7) {
+        grid.removeChild(grid.lastChild);
+      }
+      monthLabel.textContent = monthNames[viewMonth] + ' ' + viewYear;
+      var isCurrentMonth = viewYear === currentYear && viewMonth === currentMonth;
+      prevBtn.disabled = isCurrentMonth;
+      var firstDay = new Date(viewYear, viewMonth, 1).getDay();
+      var daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      for (var i = 0; i < firstDay; i++) {
+        var empty = document.createElement('div');
+        empty.className = 'calendar-day calendar-day--empty';
+        grid.appendChild(empty);
+      }
+      for (var d = 1; d <= daysInMonth; d++) {
+        var cell = document.createElement('div');
+        cell.className = 'calendar-day';
+        cell.textContent = d;
+        grid.appendChild(cell);
+      }
+    }
+
+    prevBtn.addEventListener('click', function () {
+      if (viewYear === currentYear && viewMonth === currentMonth) { return; }
+      viewMonth -= 1;
+      if (viewMonth < 0) { viewMonth = 11; viewYear -= 1; }
+      render();
+    });
+    nextBtn.addEventListener('click', function () {
+      viewMonth += 1;
+      if (viewMonth > 11) { viewMonth = 0; viewYear += 1; }
+      render();
+    });
+
+    render();
+  })();
+</script>
+
+<div class="cta-band">
+  <h2>Vous voulez être avisé de la prochaine séance?</h2>
+  <p>Envoyez-moi un courriel directement et je vous informerai dès que la prochaine démonstration sera prévue.</p>
+  <a class="cta-button large" href="mailto:{{ site.contactEmail }}">Écrire à {{ site.consultantName }}</a>
+</div>
+
+<div class="cta-band">
+  <h2>Prêt à transformer votre cuisine?</h2>
+  <p>Faites-vous livrer le Thermomix TM7 partout au Canada avec la livraison gratuite, appuyée par la garantie Vorwerk de 2 ans.</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">Livraison gratuite sur le TM7</a>
+</div>
+
+<section class="faq-preview">
+  <h2 class="section-heading">Voir aussi</h2>
+  <div class="link-row">
+    <a href="/fr/tm7/">Voir les détails du TM7 →</a>
+    <a href="/fr/reviews/">Avis →</a>
+    <a href="/fr/faq/">Voir toutes les FAQ →</a>
+  </div>
+</section>

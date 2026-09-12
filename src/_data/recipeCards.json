@@ -1,0 +1,20 @@
+[
+  { "file": "margarita", "name": "Jamaica Hibiscus Margarita" },
+  { "file": "chocolate-cake", "name": "Chocolate Cake" },
+  { "file": "tomato-soup-grilled-cheese", "name": "Tomato Soup with Grilled Cheese" },
+  { "file": "korean-fried-chicken", "name": "Korean Fried Chicken" },
+  { "file": "salmon-hollandaise", "name": "Salmon with Lemon Hollandaise Sauce" },
+  { "file": "broccoli-salad", "name": "Broccoli Salad, Red Pepper, Pine Nuts" },
+  { "file": "creamy-chicken-pasta", "name": "Creamy Chicken and Sun-dried Tomato Pasta" },
+  { "file": "pizza-dough", "name": "Pizza Dough" },
+  { "file": "chicken-kievs", "name": "LCHF Chicken Kievs" },
+  { "file": "parmesan-risotto", "name": "Parmesan Risotto" },
+  { "file": "lemon-rosemary-chicken-rice", "name": "Lemon Rosemary Chicken and Rice" },
+  { "file": "berry-dream", "name": "Berry Dream" },
+  { "file": "sticky-sesame-chicken", "name": "Sticky Sesame Chicken" },
+  { "file": "banana-bread", "name": "Banana Bread" },
+  { "file": "tomato-salami-fettuccine", "name": "Creamy Tomato & Salami Fettuccine" },
+  { "file": "chicken-galette", "name": "Family Chicken Galette" },
+  { "file": "thai-peanut-chicken", "name": "Thai Peanut Chicken with Coconut Rice" },
+  { "file": "paprika-chicken", "name": "Paprika Chicken with Sour Cream Sauce" }
+]

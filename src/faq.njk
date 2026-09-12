@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Thermomix TM7 FAQ | Price, TM6 Comparison & Where to Buy
+description: Answers to the most-searched Thermomix TM7 questions — Canadian pricing, TM7 vs TM6 differences, Cookidoo, warranty, what's included, and where to buy.
+permalink: /faq/
+---
+
+<script type="application/ld+json">{{ faqSections | faqSchema | safe }}</script>
+
+<section class="hero">
+  <span class="eyebrow">FAQ</span>
+  <h1>Thermomix TM7 Frequently Asked Questions</h1>
+  <p class="lede">Everything people ask before buying a Thermomix TM7 in Canada — price, how it compares to the TM6, Cookidoo, warranty, and where to order.</p>
+</section>
+
+{% for section in faqSections %}
+<section class="faq-preview">
+  <h2 class="section-heading">{{ section.heading }}</h2>
+  {% for item in section.items %}
+  <details>
+    <summary>{{ item.q }}</summary>
+    <p>{{ item.a }}</p>
+  </details>
+  {% endfor %}
+</section>
+{% endfor %}
+
+<div class="cta-band">
+  <h2>Got the Answers You Needed?</h2>
+  <p>If that covered it, order through my link for free shipping across Canada, backed by Vorwerk's 2-year warranty — or reach out directly with anything else.</p>
+  <a class="cta-button large" href="{{ site.consultantLink }}">Get Free Shipping on the TM7</a>
+</div>
