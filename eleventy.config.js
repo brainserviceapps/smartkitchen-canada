@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   // Copy static assets straight through to the output folder
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/CNAME");
 
   // Builds FAQPage JSON-LD straight from the same data used to render
   // the visible FAQ accordion, so the two can never drift out of sync.
