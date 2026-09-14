@@ -634,7 +634,7 @@ p { margin: 0 0 1rem; }
 }
 .promo-card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
 .promo-card p { margin: 0 0 1rem; color: var(--muted); font-size: 0.9rem; }
-.promo-card .cta-button { margin-top: auto; font-size: 0.85rem; padding: 0.55rem 1rem; }
+.promo-card .cta-button { align-self: center; margin-top: auto; font-size: 0.85rem; padding: 0.55rem 1rem; }
 
 .before-after {
   display: grid;
