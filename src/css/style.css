@@ -773,6 +773,16 @@ summary {
 }
 details p { margin: 0.75rem 0 0; color: var(--muted); }
 
+.become-consultant {
+  text-align: center;
+}
+.become-consultant h2,
+.become-consultant p,
+.become-consultant .callout,
+.become-consultant .compare-wrap {
+  text-align: left;
+}
+
 /* ---------- CTA band ---------- */
 
 .cta-band {
