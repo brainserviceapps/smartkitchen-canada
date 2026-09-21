@@ -4,6 +4,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/BingSiteAuth.xml");
+  eleventyConfig.addPassthroughCopy({ "src/favicons": "/" });
 
   // Builds FAQPage JSON-LD straight from the same data used to render
   // the visible FAQ accordion, so the two can never drift out of sync.
