@@ -597,7 +597,8 @@ p { margin: 0 0 1rem; }
 
 .promo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 340px));
+  justify-content: center;
   align-items: stretch;
   gap: 1.25rem;
   margin: 1.5rem 0;
