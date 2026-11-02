@@ -4,6 +4,85 @@ title: TM7 Canada | Free Shipping Through My Consultant Link
 description: The Thermomix TM7 in Canada — price, features, and free shipping through my consultant link.
 ---
 
+<div class="bf-banner">
+  <p>Shop Black Friday Thermomix Canada Deals</p>
+  <a class="cta-button" href="{{ site.consultantLink }}">Shop Now</a>
+</div>
+
+<section class="bf-carousel" id="bf-carousel" aria-label="Shop Black Friday Thermomix Canada deals">
+  <div class="bf-slide is-active">
+    <a class="bf-slide-media" href="{{ site.consultantLink }}" aria-label="Shop Black Friday Thermomix Canada deals">
+      <img src="/images/black-friday-wordmark.webp" alt="Black Friday — Thermomix Canada deals" loading="eager" width="2000" height="750">
+    </a>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-second-bowl.webp" alt="Thermomix TM7 Second Mixing Bowl Bundle, a Black Friday Thermomix Canada deal" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>Second Mixing Bowl Bundle</h2>
+        <p>Buy a Thermomix® TM7™ and get a 2nd Mixing Bowl for only $119*, with 0% APR for 12 months*.</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">Shop Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-ultimate-bundle.webp" alt="Thermomix TM7 Black Friday Ultimate Bundle, a Black Friday Thermomix Canada deal" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>Black Friday Ultimate Bundle</h2>
+        <p>Buy a Thermomix® TM7™ and a Cutter+, get the Mixing Bowl FREE*, and get as low as 0% APR available for 12-month financing*.</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">Shop Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-0apr.webp" alt="0% APR financing on the Thermomix TM7, a Black Friday Thermomix Canada deal" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>As Low As 0% APR</h2>
+        <p>Available for 12-month financing* on all Thermomix® TM7™ purchases. T&C applies.</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">Discover the Bundle</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-dots" role="tablist" aria-label="Black Friday slides">
+    <button type="button" class="bf-dot is-active" data-slide="0" aria-label="Slide 1"></button>
+    <button type="button" class="bf-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button type="button" class="bf-dot" data-slide="2" aria-label="Slide 3"></button>
+    <button type="button" class="bf-dot" data-slide="3" aria-label="Slide 4"></button>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var slides = document.querySelectorAll('#bf-carousel .bf-slide');
+    var dots = document.querySelectorAll('#bf-carousel .bf-dot');
+    if (!slides.length) return;
+    var current = 0;
+    var timer;
+    function show(index) {
+      slides[current].classList.remove('is-active');
+      if (dots[current]) dots[current].classList.remove('is-active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      if (dots[current]) dots[current].classList.add('is-active');
+    }
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () { show(current + 1); }, 6000);
+    }
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        startTimer();
+      });
+    });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      startTimer();
+    }
+  })();
+</script>
+
 <section class="hero">
   <span class="eyebrow">Thermomix TM7 Canada: Now Available</span>
   <h1>{{ site.tagline }}</h1>

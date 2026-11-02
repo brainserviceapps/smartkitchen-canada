@@ -5,6 +5,85 @@ description: Le Thermomix TM7 au Canada — prix, caractéristiques et livraison
 permalink: /fr/
 ---
 
+<div class="bf-banner">
+  <p>Soldes du Vendredi fou Thermomix Canada</p>
+  <a class="cta-button" href="{{ site.consultantLink }}">Magasiner maintenant</a>
+</div>
+
+<section class="bf-carousel" id="bf-carousel" aria-label="Soldes du Vendredi fou Thermomix Canada">
+  <div class="bf-slide is-active">
+    <a class="bf-slide-media" href="{{ site.consultantLink }}" aria-label="Soldes du Vendredi fou Thermomix Canada">
+      <img src="/images/black-friday-wordmark.webp" alt="Vendredi fou — soldes Thermomix Canada" loading="eager" width="2000" height="750">
+    </a>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-second-bowl.webp" alt="Ensemble deuxième bol mélangeur du TM7 — une offre du Vendredi fou Thermomix Canada" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>Ensemble deuxième bol mélangeur</h2>
+        <p>Achetez un Thermomix® TM7™ et obtenez un 2e bol mélangeur pour seulement 119 $*, avec 0 % d'intérêt sur 12 mois*.</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">Magasiner maintenant</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-ultimate-bundle.webp" alt="Ensemble Ultime du Vendredi fou pour le TM7 — une offre du Vendredi fou Thermomix Canada" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>Ensemble Ultime du Vendredi fou</h2>
+        <p>Achetez un Thermomix® TM7™ et un Cutter+, obtenez le bol mélangeur GRATUIT*, et profitez d'un taux aussi bas que 0 % sur un financement de 12 mois*.</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">Magasiner maintenant</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-0apr.webp" alt="Financement à 0 % d'intérêt sur le Thermomix TM7 — une offre du Vendredi fou Thermomix Canada" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>Taux aussi bas que 0 %</h2>
+        <p>Financement sur 12 mois* disponible pour tout achat d'un Thermomix® TM7™. Des conditions s'appliquent.</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">Découvrir l'ensemble</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-dots" role="tablist" aria-label="Diapositives du Vendredi fou">
+    <button type="button" class="bf-dot is-active" data-slide="0" aria-label="Diapositive 1"></button>
+    <button type="button" class="bf-dot" data-slide="1" aria-label="Diapositive 2"></button>
+    <button type="button" class="bf-dot" data-slide="2" aria-label="Diapositive 3"></button>
+    <button type="button" class="bf-dot" data-slide="3" aria-label="Diapositive 4"></button>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var slides = document.querySelectorAll('#bf-carousel .bf-slide');
+    var dots = document.querySelectorAll('#bf-carousel .bf-dot');
+    if (!slides.length) return;
+    var current = 0;
+    var timer;
+    function show(index) {
+      slides[current].classList.remove('is-active');
+      if (dots[current]) dots[current].classList.remove('is-active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      if (dots[current]) dots[current].classList.add('is-active');
+    }
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () { show(current + 1); }, 6000);
+    }
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        startTimer();
+      });
+    });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      startTimer();
+    }
+  })();
+</script>
+
 <section class="hero">
   <span class="eyebrow">Thermomix TM7 Canada : maintenant offert</span>
   <h1>Des repas gourmets en quelques minutes, même si vous n'avez jamais cuisiné</h1>

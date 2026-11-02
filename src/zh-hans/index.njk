@@ -5,6 +5,85 @@ description: 美善品 Thermomix TM7 在加拿大——价格、功能，以及�
 permalink: /zh-hans/
 ---
 
+<div class="bf-banner">
+  <p>选购美善品 Thermomix 黑色星期五加拿大优惠</p>
+  <a class="cta-button" href="{{ site.consultantLink }}">立即选购</a>
+</div>
+
+<section class="bf-carousel" id="bf-carousel" aria-label="选购美善品 Thermomix 黑色星期五加拿大优惠">
+  <div class="bf-slide is-active">
+    <a class="bf-slide-media" href="{{ site.consultantLink }}" aria-label="选购美善品 Thermomix 黑色星期五加拿大优惠">
+      <img src="/images/black-friday-wordmark.webp" alt="黑色星期五——美善品 Thermomix 加拿大优惠" loading="eager" width="2000" height="750">
+    </a>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-second-bowl.webp" alt="TM7 第二个搅拌锅组合——美善品 Thermomix 黑色星期五加拿大优惠" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>第二个搅拌锅组合</h2>
+        <p>购买美善品 Thermomix TM7™，加购第二个搅拌锅只要 119 元＊，并享有 12 个月 0% 分期＊。</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">立即选购</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-ultimate-bundle.webp" alt="黑色星期五终极组合——美善品 Thermomix 黑色星期五加拿大优惠" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>黑色星期五终极组合</h2>
+        <p>购买美善品 Thermomix TM7™ 搭配 Cutter+，即可免费获得搅拌锅＊，并享有最低 0% 的 12 个月分期优惠＊。</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">立即选购</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-slide">
+    <div class="bf-slide-media">
+      <img src="/images/black-friday-0apr.webp" alt="TM7 低至 0% 分期优惠——美善品 Thermomix 黑色星期五加拿大优惠" loading="eager" width="2000" height="750">
+      <div class="bf-slide-copy">
+        <h2>最低 0% 分期</h2>
+        <p>所有美善品 Thermomix TM7™ 购买皆享 12 个月分期＊，详细条款请见官网。</p>
+        <a class="cta-button" href="{{ site.consultantLink }}">了解组合详情</a>
+      </div>
+    </div>
+  </div>
+  <div class="bf-dots" role="tablist" aria-label="黑色星期五轮播">
+    <button type="button" class="bf-dot is-active" data-slide="0" aria-label="第 1 张"></button>
+    <button type="button" class="bf-dot" data-slide="1" aria-label="第 2 张"></button>
+    <button type="button" class="bf-dot" data-slide="2" aria-label="第 3 张"></button>
+    <button type="button" class="bf-dot" data-slide="3" aria-label="第 4 张"></button>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var slides = document.querySelectorAll('#bf-carousel .bf-slide');
+    var dots = document.querySelectorAll('#bf-carousel .bf-dot');
+    if (!slides.length) return;
+    var current = 0;
+    var timer;
+    function show(index) {
+      slides[current].classList.remove('is-active');
+      if (dots[current]) dots[current].classList.remove('is-active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('is-active');
+      if (dots[current]) dots[current].classList.add('is-active');
+    }
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () { show(current + 1); }, 6000);
+    }
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        startTimer();
+      });
+    });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      startTimer();
+    }
+  })();
+</script>
+
 <section class="hero">
   <span class="eyebrow">美善品 Thermomix TM7 加拿大：现已上市</span>
   <h1>几分钟做出美味料理，就算您从未下过厨</h1>
