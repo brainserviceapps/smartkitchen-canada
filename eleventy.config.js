@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   // Copy static assets straight through to the output folder
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/videos");
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/BingSiteAuth.xml");
   eleventyConfig.addPassthroughCopy({ "src/favicons": "/" });
