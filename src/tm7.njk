@@ -82,7 +82,7 @@ permalink: /tm7/
 
 <h2 class="section-heading">Meet the TM7</h2>
 <div class="video-embed">
-  <iframe src="https://player.vimeo.com/video/1113986603?h=e48aaa3a75" title="Meet the New Thermomix® TM7™ — Official Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen loading="lazy"></iframe>
+  <iframe src="https://player.vimeo.com/video/1113986603?h=e48aaa3a75&muted=1" title="Meet the New Thermomix® TM7™ — Official Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen loading="lazy"></iframe>
 </div>
 
 <section class="specs">
@@ -104,8 +104,33 @@ permalink: /tm7/
 </section>
 
 <div class="video-embed">
-  <iframe src="https://player.vimeo.com/video/1113986471?h=23989751d3" title="Thermomix® TM7™ — Official Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen loading="lazy"></iframe>
+  <iframe src="https://player.vimeo.com/video/1113986471?h=23989751d3&muted=1" title="Thermomix® TM7™ — Official Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen loading="lazy"></iframe>
 </div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  (function () {
+    if (typeof Vimeo === 'undefined') return;
+    var frames = document.querySelectorAll('.video-embed iframe');
+    if (!frames.length) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var player = entry.target._vimeoPlayer;
+        if (!player) return;
+        if (entry.isIntersecting) {
+          player.play().catch(function () {});
+        } else {
+          player.pause().catch(function () {});
+        }
+      });
+    }, { threshold: 0.5 });
+    frames.forEach(function (iframe) {
+      var player = new Vimeo.Player(iframe);
+      iframe._vimeoPlayer = player;
+      observer.observe(iframe);
+    });
+  })();
+</script>
 
 <div class="cta-band">
   <h2>Now You Know What the TM7 Can Do</h2>
