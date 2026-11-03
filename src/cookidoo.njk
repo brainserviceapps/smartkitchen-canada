@@ -11,11 +11,40 @@ permalink: /cookidoo/
   <p class="lede">Cookidoo is what turns the TM7 from a powerful appliance into a guided, step-by-step cooking system. Here's what it actually does, what it costs, and whether you need it.</p>
 </section>
 
-<img class="comparison-image" src="/images/cookidoo-transfer-recipe.jpg" alt="Sending a Leek and Potato Soup recipe from the Cookidoo phone app to the TM7 touchscreen with a single tap" loading="lazy">
+<div class="video-embed">
+  <iframe src="https://player.vimeo.com/video/1113986112?h=06161975cb&muted=1" title="Thermomix® TM7 & Cookidoo® — Official Vorwerk Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  (function () {
+    if (typeof Vimeo === 'undefined') return;
+    var frames = document.querySelectorAll('.video-embed iframe');
+    if (!frames.length) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var player = entry.target._vimeoPlayer;
+        if (!player) return;
+        if (entry.isIntersecting) {
+          player.play().catch(function () {});
+        } else {
+          player.pause().catch(function () {});
+        }
+      });
+    }, { threshold: 0.5 });
+    frames.forEach(function (iframe) {
+      var player = new Vimeo.Player(iframe);
+      iframe._vimeoPlayer = player;
+      observer.observe(iframe);
+    });
+  })();
+</script>
 
 <h2 class="section-heading">What Is Cookidoo?</h2>
 <p>Cookidoo is Vorwerk's official recipe platform — think of it as the TM7's operating system for recipes. Rather than reading a recipe and guessing at heat and timing yourself, you pull a recipe up on Cookidoo and the TM7 receives the instructions directly: it sets its own time, temperature, and speed for every single step, and tells you exactly what to add and when.</p>
 <p>It's not limited to the TM7's touchscreen, either — Cookidoo runs as a website and a mobile app, so you can browse and plan recipes from your phone on the bus, then send them to the machine once you're home.</p>
+
+<img class="comparison-image" src="/images/cookidoo-transfer-recipe.jpg" alt="Sending a Leek and Potato Soup recipe from the Cookidoo phone app to the TM7 touchscreen with a single tap" loading="lazy">
 
 {% include "recipe-carousel.njk" %}
 
@@ -73,35 +102,6 @@ permalink: /cookidoo/
 </div>
 
 <p>You can also browse Cookidoo's recipe library from a web browser or the app without owning a TM7 at all — you just won't be able to send a recipe to a machine to run it, since Guided Cooking only works once Cookidoo is paired with a Thermomix.</p>
-
-<div class="video-embed">
-  <iframe src="https://player.vimeo.com/video/1113986112?h=06161975cb&muted=1" title="Thermomix® TM7 & Cookidoo® — Official Vorwerk Video" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen loading="lazy"></iframe>
-</div>
-
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script>
-  (function () {
-    if (typeof Vimeo === 'undefined') return;
-    var frames = document.querySelectorAll('.video-embed iframe');
-    if (!frames.length) return;
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var player = entry.target._vimeoPlayer;
-        if (!player) return;
-        if (entry.isIntersecting) {
-          player.play().catch(function () {});
-        } else {
-          player.pause().catch(function () {});
-        }
-      });
-    }, { threshold: 0.5 });
-    frames.forEach(function (iframe) {
-      var player = new Vimeo.Player(iframe);
-      iframe._vimeoPlayer = player;
-      observer.observe(iframe);
-    });
-  })();
-</script>
 
 <div class="cta-band">
   <h2>Ready to Put Cookidoo to Work?</h2>
