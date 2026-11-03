@@ -362,6 +362,19 @@ p { margin: 0 0 1rem; }
   pointer-events: none;
 }
 
+.portrait-video {
+  max-width: 320px;
+  margin: 1.5rem auto;
+}
+.portrait-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
 .recipe-carousel {
   overflow: hidden;
   margin: 1.5rem 0 2rem;
