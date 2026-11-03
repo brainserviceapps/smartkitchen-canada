@@ -464,6 +464,11 @@ p { margin: 0 0 1rem; }
   border: 1px solid var(--border);
   margin: 1.5rem 0 2rem;
 }
+.comparison-image--sm {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .accessory-image {
   display: block;
